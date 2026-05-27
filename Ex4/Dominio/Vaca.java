@@ -17,6 +17,6 @@ public class Vaca extends Animal {
     @Override
     public void exibir()
     {
-        System.out.println("Som de um "+getTipo()+":"+super.getSom());
+        System.out.println("Som de uma "+getTipo()+":"+super.getSom());
     }
 }

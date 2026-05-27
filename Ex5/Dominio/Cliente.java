@@ -19,7 +19,7 @@ public class Cliente implements Autenticavel {
     @Override
     public void exibirId()
     {
-        System.out.println("Id do cliente "+getNome()+":"+getId());
+        System.out.println("Id do cliente "+getNome()+":"+getId()) ;
     }
     
 }

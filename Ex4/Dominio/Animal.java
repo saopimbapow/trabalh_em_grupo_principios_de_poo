@@ -9,6 +9,7 @@ public abstract class Animal {
     }
 
     public String getSom(){return som;}
+    
     public abstract void exibir();
     
 }

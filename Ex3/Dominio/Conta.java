@@ -7,6 +7,6 @@ public abstract class Conta
     public Conta(String nome, double saldo)
     {
         this.nome=nome;
-        this.saldo=saldo;
+        this.saldo=saldo; 
     }
 }

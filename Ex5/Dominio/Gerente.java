@@ -21,7 +21,7 @@ public class Gerente extends Funcionario implements Autenticavel
     }
     public void exibir()
     {
-        System.out.println("Nome:"+nome+ "\nDepartamento:"+departamento+"\nSalario:"+super.getSalario());
+        System.out.println("Nome:"+nome+ "\nDepartamento:"+departamento+"\nSalario:"+super.getSalario()) ;
     }
 
     

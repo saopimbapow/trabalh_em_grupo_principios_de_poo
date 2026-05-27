@@ -29,6 +29,6 @@ public class  Funcionario implements Pagavel
     public String toString() {
         return "CPF: " + cpf +
                " | Salário: R$ " + salario +
-               " | Pagamento: R$ " + calcularPagamento();
+               " | Pagamento: R$ " + calcularPagamento() ;
     }
 }

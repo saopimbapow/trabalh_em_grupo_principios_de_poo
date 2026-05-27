@@ -9,7 +9,7 @@ import java.util.Random;
 public class Main
 {
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
+		Scanner sc=new Scanner(System.in) ;
 		Random rand= new Random();
 		boolean fim=true;
 		ContaC c1=null;

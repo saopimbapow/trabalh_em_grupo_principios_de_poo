@@ -10,5 +10,5 @@ public abstract class Funcionario
         this.salario=salario;
     }
     
-    public abstract double calcSalario();
+    public abstract double calcSalario() ;
 }

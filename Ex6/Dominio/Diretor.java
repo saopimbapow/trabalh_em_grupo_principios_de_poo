@@ -27,7 +27,7 @@ public class Diretor extends Funcionario{
         return "CPF: " + cpf +
                " | Salario: R$ " + salario +
                " | Comissao: R$" + bonus+
-               " | Pagamento: R$ " + calcularPagamento();
+               " | Pagamento: R$ " + calcularPagamento() ;
     }
 
     

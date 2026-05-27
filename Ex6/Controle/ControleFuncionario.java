@@ -98,7 +98,7 @@ public class ControleFuncionario {
      }
       public static void buscarFuncionario(Scanner sc,ArrayList<Funcionario> contratados)
       {
-        System.out.print("CPF a ser buscado:");
+        System.out.print("CPF a ser buscado:") ; 
         String cpf = sc.nextLine();
 
         for( Funcionario funcio : contratados)

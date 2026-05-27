@@ -7,7 +7,7 @@ public class Moto extends Veiculos
     public Moto(String marca, String modelo,int cilindradas)
     {
         super(modelo,marca);
-        this.cilindradas=cilindradas;
+        this.cilindradas=cilindradas ;
     }
     
     @Override

@@ -8,7 +8,7 @@ public abstract class Veiculos
     public Veiculos(String modelo, String marca)
     {
         this.marca=marca;
-        this.modelo=modelo;
+        this.modelo=modelo ;
     }
     
     public abstract void exibirDados();

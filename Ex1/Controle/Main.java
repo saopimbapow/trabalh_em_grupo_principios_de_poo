@@ -10,7 +10,7 @@ public class Main
 		Random rand=new Random();
 		Scanner sc=new Scanner(System.in);
 		
-		System.out.print("Marca:");
+		System.out.print("Marca:") ;
         String marca=sc.nextLine();
         
         System.out.print("Modelo:");

@@ -17,6 +17,6 @@ public class Cachorro extends Animal {
     @Override
     public void exibir()
     {
-        System.out.println("Som de um "+getRaca()+":"+super.getSom());
+        System.out.println("Som de um cachorro da raça "+getRaca()+":"+super.getSom());
     }
 }

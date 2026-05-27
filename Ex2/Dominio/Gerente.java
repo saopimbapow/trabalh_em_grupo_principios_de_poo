@@ -8,7 +8,7 @@ public class Gerente extends Funcionario
     public Gerente(String nome, double salario,String departamento)
     {
         super(nome,salario);
-        this.departamento=departamento;
+        this.departamento=departamento ;
     }
     
     public double getSalario(){return salario;}

@@ -25,7 +25,7 @@ public class Vendedor extends Funcionario{
     public String toString() {
         return "CPF: " + cpf +
                " | Salario: R$ " + salario +
-               " | Comissao: R$" + comissao+
+               " | Comissao: R$" + comissao +
                " | Pagamento: R$ " + calcularPagamento();
     }
 }

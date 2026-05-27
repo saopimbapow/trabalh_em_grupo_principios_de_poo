@@ -17,7 +17,7 @@ public class Gato  extends Animal {
     @Override
     public void exibir()
     {
-        System.out.println("Som de um "+getCor()+":"+super.getSom());
+        System.out.println("Som de um gato "+getCor()+":"+super.getSom());
     }
 }
 

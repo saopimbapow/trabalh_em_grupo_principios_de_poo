@@ -47,7 +47,8 @@ public class Main {
                     case 4:
                         for(int i=0;i<zoo.size();i++)
                         {
-                            zoo.get(i).exibir();
+                            if(zoo.get(i) instanceof Cachorro)
+                                zoo.get(i).exibir();
                         }
                         
                         break;

@@ -1,21 +1,22 @@
 package Ex3.Dominio;
 public class ContaC extends Conta{
-    protected int taxaSaque;
+    protected double limite;
     
-    public ContaC(String nome,double saldo,int taxaSaque)
+    public ContaC(String nome,double saldo,double limite)
     {
         super(nome,saldo);
-        this.taxaSaque=taxaSaque;
+        this.limite=limite;
     }
-    public void setSaldo(double saldo){this.saldo=saldo;}
-    public double getSaldo(){return saldo;}
-
-    public double saque(double valor)
+    
+    public double chequeEspecial(int valor)
     {
-        double Nsaldo;
-        Nsaldo= getSaldo()-(valor* 1 +(taxaSaque/100.0));
-        setSaldo(Nsaldo);
-        System.out.println("Saldo apos saque:"+Nsaldo);
-        return Nsaldo;
+        if(valor>saldo && saldo>0)
+        {
+            saldo-=valor;
+            System.out.println("Saldo:"+saldo+"\n Cheque especial");
+            return saldo*(1.08); 
+        }
+        System.out.println("Saldo:"+saldo);
+        return saldo-valor;
     }
 }

@@ -1,6 +1,6 @@
 package Ex3.Controle;
-import Ex3.Dominio.ContaP;
 import Ex3.Dominio.ContaC;
+import Ex3.Dominio.ContaP;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -12,8 +12,8 @@ public class Main
 		Scanner sc=new Scanner(System.in);
 		Random rand= new Random();
 		boolean fim=true;
-		ContaP c1=null;
-		ContaC c2=null;
+		ContaC c1=null;
+		ContaP c2=null;
 
 		while (fim)
 		{
@@ -22,34 +22,15 @@ public class Main
 			sc.nextLine();
 			switch (menu) {
 				case 1:
-					System.out.print("Nome:");
-					String nome=sc.nextLine();
-					System.out.print("Saldo:");
-					double saldo=sc.nextDouble();
-					double limite=rand.nextInt(2000)+saldo;
-					sc.nextLine();
-					c1=new ContaP(nome,saldo,limite);					
-					break;
+					
+					c2=cadastarContaP(sc,rand);
 				case 2:
-					System.out.print("Nome:");
-					nome=sc.nextLine();
-					System.out.print("Saldo:");
-					saldo=sc.nextDouble();
-					int taxa=rand.nextInt(10);
-					sc.nextLine();
-					c2=new ContaC(nome, saldo, taxa);
+					c1=cadastarContaC(sc,rand);
 				break;
 				case 3:
-					System.out.print("Saque:");
-					double valorSaque=sc.nextDouble();
-					sc.nextLine();
-					c2.saque(valorSaque);
-					break;
+					realizaSaque(sc,c2);
 				case 4:
-					System.out.print("Valor gasto:");
-					int valorGasto=sc.nextInt();
-					sc.nextLine();
-					c1.chequeEspecial(valorGasto);
+					chequeEspecial(sc, c1);
 				default:
 					fim=false;
 					break;
@@ -57,5 +38,44 @@ public class Main
 
 		}
 		sc.close();
+	}
+
+	public static ContaP cadastarContaP(Scanner sc, Random rand)
+	{
+		 System.out.print("Nome:");
+		 String nome=sc.nextLine();
+		 System.out.print("Saldo:");
+		 double saldo=sc.nextDouble();
+		 sc.nextLine();
+		 int taxa=rand.nextInt(10);
+		 ContaP c1=new ContaP(nome,saldo, taxa);	
+		 return c1;				
+	}
+
+	public static ContaC cadastarContaC(Scanner sc,Random rand)
+	{
+		System.out.print("Nome:");
+		String nome=sc.nextLine();
+		System.out.print("Saldo:");
+		Double saldo=sc.nextDouble();
+		double limite=rand.nextInt(2000)+saldo;
+		
+		sc.nextLine();
+		ContaC c2=new ContaC(nome, saldo,limite);
+		return c2;
+	}
+	public static void realizaSaque(Scanner sc,ContaP c2)
+	{	
+		System.out.print("Saque:");
+		double valorSaque=sc.nextDouble();
+		sc.nextLine();
+		c2.saque(valorSaque);
+	}
+	public static void chequeEspecial(Scanner sc,ContaC c1)
+	{
+		System.out.print("Valor gasto:");
+			int valorGasto=sc.nextInt();
+			sc.nextLine();
+			c1.chequeEspecial(valorGasto);
 	}
 }

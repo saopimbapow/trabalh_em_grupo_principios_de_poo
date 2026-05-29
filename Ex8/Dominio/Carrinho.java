@@ -1,4 +1,4 @@
-package Dominio;
+package Ex8.Dominio;
 
 import java.util.ArrayList;
 

@@ -9,6 +9,16 @@ public class carro extends veiculo implements Tributavel  {
         this.quilometragem = quilometragem;
 
     }
+    @Override
+    public String toString()
+    {
+        return "Tipo do veiculo: "+getClass().getSimpleName() +
+                "\tPlaca: "+getPlaca()+
+                "\tCusto Fixo: "+ getCustoFixo() +
+                "\tCusto total:"+calcularValor()+
+                "\tQuilometragem: "+quilometragem;
+    }
+
 
     @Override
     public double calcularValor(){

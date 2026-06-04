@@ -9,6 +9,7 @@ public class Main{
         caminhao caminhao2 = null;
         carro carrao = null;
         boolean continuar = true;
+        GerenciaraFrota frota = new GerenciaraFrota();
 
 
         while (continuar){
@@ -35,6 +36,7 @@ public class Main{
                     System.out.println("custo fixo do carro:");
                     double custoFixo = scanner.nextDouble();
                     carrao = new carro(quilometragem, placa, custoFixo);
+                    frota.adicionarVeiculo(carrao);
                     break;
 
                 case 2:
@@ -45,6 +47,7 @@ public class Main{
                     System.out.println("custo fixo do caminhão:");
                     double custoFixo2 = scanner.nextDouble();
                     caminhao2 = new caminhao(tonecargas2, placa2, custoFixo2);
+                    frota.adicionarVeiculo(caminhao2);
                     break;
 
                 case 3:
@@ -53,15 +56,14 @@ public class Main{
                     int escolha2 = scanner.nextInt();
                     switch (escolha2) {
                         case 0:
-                            caminhao2.calcularValor();
+                            System.out.println("custo total do caminhão: R$ " + (caminhao2.calcularValor()));
                             break;
                         case 1:
-                            carrao.calcularValor();
+                            System.out.println("custo total do carro: R$ " + (carrao.calcularValor()));
                             break;
-                        default:
 
-                       break;
                     }
+                    break;
 
                 case 4:
                     System.out.println("custo total do:");
@@ -69,20 +71,26 @@ public class Main{
                     int escolha3 = scanner.nextInt();
                     switch (escolha3) {
                         case 0:
-                            caminhao2.calcularIPVA();
+                            System.out.println("custo total do caminhão: R$ " + (caminhao2.calcularIPVA()));
                             break;
                         case 1:
-                            carrao.calcularIPVA();
-                            break;
-                            default:
 
-                        break;
+                            System.out.println("custo total do carro: R$ " + (carrao.calcularIPVA()));
+                            break;
+
 
                     }
+                    break;
+                case 5:
+
+                    frota.salvarDadosEmArquivo("Frota.txt");
+                    frota.lerDadosEmArquivo("Frota.txt");
+                    break;
 
                 case 6:
                     System.out.println("fechando.");
                     continuar = false;
+                    break;
 
 
             }

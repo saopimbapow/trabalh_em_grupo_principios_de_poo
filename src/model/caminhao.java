@@ -15,6 +15,7 @@ public class caminhao extends veiculo implements Tributavel {
     public double calcularValor(){
         double custototal = getCustoFixo() + (toneladasCarga * 50.0);
         return custototal;
+
     }
 
     @Override
@@ -23,5 +24,14 @@ public class caminhao extends veiculo implements Tributavel {
         return IPVA;
 
 
+    }
+    @Override
+    public String toString()
+    {
+        return "Tipo do veiculo: "+getClass().getSimpleName() +
+                "\tPlaca: "+getPlaca()+
+                "\tCusto Fixo: "+ getCustoFixo()+
+                "\tCusto Total: "+ calcularValor() +
+                "\tCarga: "+toneladasCarga+" toneladas";
     }
 }

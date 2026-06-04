@@ -39,5 +39,10 @@ public abstract class veiculo  {
             return true;
         }
     }
+    @Override
+    public String toString()
+    {
+        return  "Placa: "+placa+"\t Custo Fixo: "+ custoFixo;
+    }
     public abstract double calcularValor();
 }

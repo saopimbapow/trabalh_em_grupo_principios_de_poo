@@ -1,4 +1,4 @@
-package Ex11.Model;
+package Model;
 
 public class Carro extends Veiculo implements Tribiutavel {
     private int quilometragem;

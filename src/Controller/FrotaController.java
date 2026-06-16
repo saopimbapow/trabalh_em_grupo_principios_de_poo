@@ -1,8 +1,8 @@
-package Ex11.Controller;
+package Controller;
 
-import Ex11.Model.*;
-import Ex11.Repository.*;
-import Ex11.View.ConsoleView;
+import Model.*;
+import Repository.*;
+import View.ConsoleView;
 
 
 

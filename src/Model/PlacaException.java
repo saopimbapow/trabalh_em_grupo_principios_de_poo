@@ -1,4 +1,4 @@
-package Ex11.Model;
+package Model;
 
 public class PlacaException extends RuntimeException {
     private String placa;

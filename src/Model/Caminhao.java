@@ -1,4 +1,4 @@
-package Ex11.Model;
+package Model;
 
 public class Caminhao extends Veiculo implements Tribiutavel {
     private double toneladasCarga;

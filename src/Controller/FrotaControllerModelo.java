@@ -1,11 +1,11 @@
-package Ex11.Controller;
+package Controller;
 
-import Ex11.Model.Caminhao;
-import Ex11.Model.Carro;
-import Ex11.Model.PlacaException;
-import Ex11.Model.Veiculo;
-import Ex11.Repository.GerenciarFrota;
-import Ex11.View.ConsoleViewModelo;
+import Model.Caminhao;
+import Model.Carro;
+import Model.PlacaException;
+import Model.Veiculo;
+import Repository.GerenciarFrota;
+import View.ConsoleViewModelo;
 
 public class FrotaControllerModelo {
     

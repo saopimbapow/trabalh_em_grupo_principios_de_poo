@@ -1,4 +1,4 @@
-package Ex11.Model;
+package Model;
 
 public abstract class Veiculo {
     private String placa;

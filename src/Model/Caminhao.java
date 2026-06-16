@@ -30,6 +30,7 @@ public class Caminhao extends Veiculo implements Tribiutavel {
         "\tCusto Total: "+calcCustoTotal()+
         "\tCarga: "+toneladasCarga+" toneladas";
     }
+    
 }
 
 
